@@ -1,15 +1,15 @@
 const db = require("../models");
 const { validationResult } = require('express-validator');
-const SourceRecord = db.sourceRecord;
+const categoryRecord = db.categoryRecord;
 
 const Op = db.Sequelize.Op;
 
-exports.getSourceRecords = (req, res) => {
-  SourceRecord.findAll()
+exports.getCategoryRecords = (req, res) => {
+  categoryRecord.findAll()
     .then((data) => {
       res.status(200).json({
         status: true,
-        message: "Get source record success!",
+        message: "Get category record success!",
         data: data,
       });
     })
@@ -21,7 +21,7 @@ exports.getSourceRecords = (req, res) => {
     });
 };
 
-exports.postSourceRecord = (req, res) => {
+exports.postCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
@@ -31,13 +31,13 @@ exports.postSourceRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  SourceRecord.create({
-    sourceType: req.body.sourceType,
-    source: req.body.source,
+  categoryRecord.create({
+    categoryType: req.body.sourceType,
+    category: req.body.source,
   }).then((data) => {
     res.status(201).json({
       status: true,
-      message: "Create source record success!",
+      message: "Create category record success!",
       data: data,
     });
   })
@@ -49,7 +49,7 @@ exports.postSourceRecord = (req, res) => {
   });
 };
 
-exports.updateSourceRecord = (req, res) => {
+exports.updateCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
@@ -59,7 +59,7 @@ exports.updateSourceRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  SourceRecord.findAll({
+  categoryRecord.findAll({
     where: {
       id: req.params.ID,
     },
@@ -72,10 +72,10 @@ exports.updateSourceRecord = (req, res) => {
       });
     }
 
-    SourceRecord.update(
+    categoryRecord.update(
       {
-        sourceType: req.body.sourceType,
-        source: req.body.source,
+        categoryRecord: req.body.categoryRecord,
+        category: req.body.category,
       },
       {
         where: { id: req.params.ID },
@@ -83,7 +83,7 @@ exports.updateSourceRecord = (req, res) => {
     ).then((data) => {
       res.status(201).json({
         status: true,
-        message: "Update source record success!",
+        message: "Update category record success!",
         data: data,
       });
     })
@@ -102,7 +102,7 @@ exports.updateSourceRecord = (req, res) => {
   });
 };
 
-exports.deleteSourceRecord = (req, res) => {
+exports.deleteCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
@@ -112,7 +112,7 @@ exports.deleteSourceRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  SourceRecord.findAll({
+  categoryRecord.findAll({
     where: {
       id: req.params.ID
     },
@@ -124,14 +124,14 @@ exports.deleteSourceRecord = (req, res) => {
         message: "No match record found with that ID!",
       });
     }
-    SourceRecord.destroy({
+    categoryRecord.destroy({
       where: {
         id: req.params.ID
       },
     }).then((data) => {
       res.status(200).json({
         status: true,
-        message: "Delete source record success!",
+        message: "Delete category record success!",
         data: data,
       });
     })

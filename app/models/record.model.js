@@ -6,12 +6,8 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false,
       autoIncrement: true,
     },
-    // source: {
-    //   type: Sequelize.ENUM("bank_bsi", "bank_jago", "dana"),
-    //   allowNull: false,
-    // },
-    actor: {
-      type: Sequelize.ENUM("me", "other"),
+    actorId: {
+      type: Sequelize.INTEGER,
       allowNull: false,
     },
     transaction: {

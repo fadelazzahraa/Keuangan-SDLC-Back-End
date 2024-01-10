@@ -16,8 +16,8 @@ exports.getRecords = (req, res) => {
   }
   var whereQuery = []
   
-  if ('actor' in req.query){
-    whereQuery.push({actor: req.query.actor})
+  if ('actorId' in req.query){
+    whereQuery.push({actorId: req.query.actorId})
   }
   if ('detail' in req.query){
     whereQuery.push({detail: {[Op.substring]: req.query.detail}})
@@ -28,8 +28,8 @@ exports.getRecords = (req, res) => {
   if ('tag' in req.query){
     whereQuery.push({tag: {[Op.substring]: req.query.tag}})
   }
-  if ('sourceRecordId' in req.query){
-    whereQuery.push({sourceRecordId: req.query.sourceRecordId})
+  if ('categoryRecordId' in req.query){
+    whereQuery.push({categoryRecordId: req.query.categoryRecordId})
   }
 
   Record.findAll(Object.keys(whereQuery).length !== 0 ? {
@@ -99,13 +99,13 @@ exports.postRecord = (req, res) => {
       });
   }
   Record.create({
-    actor: req.body.actor,
+    actorId: req.body.actorId,
     transaction: req.body.transaction,
     value: req.body.value,
     detail: req.body.detail,
     date: req.body.date,
     tag: req.body.tag,
-    sourceRecordId: req.body.sourceRecordId,
+    categoryRecordId: req.body.categoryRecordId,
     photoRecordId: req.body.photoRecordId,
   }).then((data) => {
     res.status(201).json({
@@ -147,13 +147,13 @@ exports.updateRecord = (req, res) => {
 
     Record.update(
       {
-        actor: req.body.actor,
+        actorId: req.body.actorId,
         transaction: req.body.transaction,
         value: req.body.value,
         detail: req.body.detail,
         date: req.body.date,
         tag: req.body.tag,
-        sourceRecordId: req.body.sourceRecordId,
+        categoryRecordId: req.body.categoryRecordId,
         photoRecordId: req.body.photoRecordId,
       },
       {

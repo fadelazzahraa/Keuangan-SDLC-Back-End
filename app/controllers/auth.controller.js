@@ -1,7 +1,10 @@
+require("dotenv").config();
+
 const db = require("../models");
 const config = require("../config/auth.config");
 const User = db.user;
 const Role = db.role;
+
 
 const Op = db.Sequelize.Op;
 
@@ -10,16 +13,23 @@ const bcrypt = require("bcryptjs");
 
 exports.signup = async (req, res) => {
   try {
+    var role = "user";
+    if ('adminPass' in req.body){
+      console.log(req.body.adminPass);
+      if (req.body.adminPass == process.env.ADMINPASS){
+        role = "admin";
+      }
+    }
+
     const user = await User.create({
       username: req.body.username,
-      email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 8),
-      role: "user"
+      role: role,
     });
-
+    
     res.status(201).send({
       status: "true",
-      message: "User registered successfully!",
+      message: role == "user" ? "User registered successfully!" : "Admin registered successfully!",
     });
 
   } catch (error) {

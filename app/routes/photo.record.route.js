@@ -15,8 +15,7 @@ module.exports = function (app) {
   app.post("/photos", [
     authJwt.verifyToken,
     body("detail").optional().isString().withMessage("Detail invalid"),
-    body("startDate").notEmpty().withMessage("StartDate shouldn't empty").isDate().withMessage("StartDate invalid"),
-    body("endDate").optional().isDate().withMessage("StartDate invalid"),
+    body("date").notEmpty().withMessage("Date shouldn't empty").isDate().withMessage("Date invalid"),
     body("tag").optional().isString().withMessage("Detail invalid"),
   ], controller.postPhotoRecord);
   
@@ -49,8 +48,7 @@ module.exports = function (app) {
     authJwt.verifyToken,
     check("ID").isInt().withMessage("ID must be an integer"),
     body("detail").optional().isString().withMessage("Detail invalid"),
-    body("startDate").optional().isDate().withMessage("StartDate invalid"),
-    body("endDate").optional().isDate().withMessage("StartDate invalid"),
+    body("date").optional().isDate().withMessage("Date invalid"),
     body("tag").optional().isString().withMessage("Detail invalid"),
   ], controller.updatePhotoRecord);
   app.delete("/photos/:ID", [

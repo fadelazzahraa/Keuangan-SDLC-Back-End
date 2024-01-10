@@ -1,20 +1,20 @@
 module.exports = (sequelize, Sequelize) => {
-  const SourceRecord = sequelize.define("sourceRecord", {
+  const categoryRecord = sequelize.define("categoryRecord", {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
     },
-    sourceType: {
-      type: Sequelize.ENUM("bankAccount", "eWallet", "wallet", "other"),
+    categoryType: {
+      type: Sequelize.ENUM("debit", "credit"),
       allowNull: false,
     },
-    source: {
+    category: {
       type: Sequelize.STRING,
       allowNull: false,
     },
   });
 
-  return SourceRecord;
+  return categoryRecord;
 };

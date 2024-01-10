@@ -13,12 +13,8 @@ exports.getPhotoRecords = (req, res) => {
   if ('detail' in req.query){
     whereQuery.push({detail: {[Op.substring]: req.query.detail}})
   }
-  if ('startDate' in req.query){
-    whereQuery.push({startDate: req.query.startDate})
-    console.log("ada startdate")
-  }
-  if ('endDate' in req.query){
-    whereQuery.push({endDate: req.query.endDate})
+  if ('date' in req.query){
+    whereQuery.push({date: req.query.date})
   }
   if ('tag' in req.query){
     whereQuery.push({tag: {[Op.substring]: req.query.tag}})
@@ -73,8 +69,7 @@ exports.getPhotoRecordByID = (req, res) => {
 exports.postPhotoRecord = (req, res) => {
   PhotoRecord.create({
       detail: req.body.detail,
-      startDate: req.body.startDate,
-      endDate: req.body.endDate,
+      date: req.body.date,
       tag: req.body.tag,
     }).then((data) => {
       res.status(201).json({
@@ -108,8 +103,7 @@ exports.updatePhotoRecord = (req, res) => {
     PhotoRecord.update(
       {
         detail: req.body.detail,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
+        date: req.body.date,
         tag: req.body.tag,
       },
       {
