@@ -32,8 +32,8 @@ exports.postCategoryRecord = (req, res) => {
       });
   }
   categoryRecord.create({
-    categoryType: req.body.sourceType,
-    category: req.body.source,
+    categoryType: req.body.categoryType,
+    category: req.body.category,
   }).then((data) => {
     res.status(201).json({
       status: true,
