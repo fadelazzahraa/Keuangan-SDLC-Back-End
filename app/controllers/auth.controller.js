@@ -17,6 +17,11 @@ exports.signup = async (req, res) => {
       console.log(req.body.adminPass);
       if (req.body.adminPass == process.env.ADMINPASS){
         role = "admin";
+      } else {
+        return res.status(401).send({
+          status: false,
+          message: "Invalid admin password!",
+        });
       }
     }
 

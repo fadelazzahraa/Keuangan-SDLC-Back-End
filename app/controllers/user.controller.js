@@ -27,7 +27,6 @@ exports.getUserProfile = async (req, res) => {
         data: {
           id: userdata.id,
           username: userdata.username,
-          email: userdata.email,
         },
       });
     } catch (err) {
@@ -49,7 +48,6 @@ exports.postUserProfile = (req, res) => {
       const dataUser = user.dataValues;
       const dataUpdate = {
         username: req.body.username ? req.body.username : dataUser.username,
-        email: req.body.email ? req.body.email : dataUser.email,
       };
       User.update(dataUpdate, {
         where: {
@@ -79,7 +77,7 @@ exports.postUserProfile = (req, res) => {
 
 exports.getUser = async (req, res) => {
   const user = await User.findAll({
-    attributes: ['id', 'username', 'email', 'role']
+    attributes: ['id', 'username', 'role']
   });
   try {
     return res.status(200).send({
