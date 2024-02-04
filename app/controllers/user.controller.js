@@ -9,11 +9,11 @@ const Op = db.Sequelize.Op;
 exports.getUserProfile = async (req, res) => {
   const user = await User.findOne({
     where: {
-      id: req.body.id ? req.body.id : req.userId,
+      id: req.body.id || req.userId,
     },
   });
 
-  if (!user.length) {
+  if (!user) {
     return res.status(404).send({
       status: false,
       message: "User not found!",
@@ -41,7 +41,7 @@ exports.getUserProfile = async (req, res) => {
 exports.postUserProfile = (req, res) => {
   User.findOne({
     where: {
-      id: req.body.id ? req.body.id : req.userId,
+      id: req.body.id || req.userId,
     },
   })
     .then(async (user) => {
@@ -51,7 +51,7 @@ exports.postUserProfile = (req, res) => {
       };
       User.update(dataUpdate, {
         where: {
-          id: req.body.id ? req.body.id : req.userId,
+          id: req.body.id || req.userId,
         },
       })
         .then((x) => {

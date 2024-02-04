@@ -18,7 +18,7 @@ exports.signup = async (req, res) => {
     if ('adminPass' in req.body){
       console.log(req.body.adminPass);
       logger.info(`Attempted admin registration with password: ${req.body.adminPass}`);
-      if (req.body.adminPass == process.env.ADMINPASS){
+      if (req.body.adminPass == config.adminPassword){
         role = "admin";
       } else {
         return res.status(401).send({
@@ -28,7 +28,7 @@ exports.signup = async (req, res) => {
       }
     }
 
-    const user = await User.create({
+    await User.create({
       username: req.body.username,
       password: bcrypt.hashSync(req.body.password, 8),
       role: role,
@@ -45,83 +45,6 @@ exports.signup = async (req, res) => {
       message: error.message,
     });
   }
-};
-
-exports.signin = async (req, res) => {
-  try {
-    const user = await User.findOne({
-      where: {
-        username: req.body.username,
-      },
-    });
-
-    if (!user) {
-      return res.status(404).send({
-        status: false,
-        message: "User not found!",
-      });
-    }
-
-    const passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
-
-    if (!passwordIsValid) {
-      return res.status(401).send({
-        status: false,
-        message: "Invalid password!",
-      });
-    }
-
-    const token = jwt.sign({ id: user.id }, config.accessTokenSecret, {
-      expiresIn: 86400, // 24 hours
-    });
-
-    return res.status(200).send({
-      status: true,
-      message: "Login success!",
-      token: token,
-      id: user.id,
-      role: user.role
-    });
-  } catch (error) {
-    return res.status(500).send({
-      status: false,
-      message: error.message,
-    });
-  }
-};
-
-exports.signout = async (req, res) => {
-  const tokenToRevoke = req.body.token;
-
-  revokedTokens.add(tokenToRevoke);
-
-  try {
-    return res.status(200).send({
-      status: true,
-      message: "You've been signed out!",
-    });
-  } catch (error) {
-    return res.status(500).send({
-      status: false,
-      message: error.message,
-    });
-  }
-};
-
-exports.revokeToken = async (req, res) => {
-  // check req.body.token. if empty, use req.get("Authorization")
-  const tokenToRevoke = req.body.token || req.get("Authorization");
-
-  if (!tokenToRevoke) {
-    return res.status(400).json({ 
-      status: false,
-      message: 'Token not provided' });
-  }
-
-  authjwt.revokedTokens.add(tokenToRevoke);
-  res.status(200).json({ 
-    status: true,
-    message: 'Token revoked successfully' });
 };
 
 exports.login = async (req, res) => {
@@ -306,7 +229,7 @@ exports.refreshRefreshToken = async (req, res) => {
             logger.error('Attempted invalid refresh token reuse!');
             const hackedUser = await User.findOne({
               where: {
-                username: decoded.username
+                username: decoded.UserInfo.username
               },
             });
 
@@ -351,7 +274,7 @@ exports.refreshRefreshToken = async (req, res) => {
           });
       }
       // Refresh token is invalid because it's not matched with the user (but this case should be not happenned because we store refresh token in correct user's record in db)
-      if (err || user.username !== decoded.username) return res.status(403).send({
+      if (err || user.username !== decoded.UserInfo.username) return res.status(403).send({
           status: false,
           message: "Mismatch token!"
       });
@@ -434,7 +357,7 @@ exports.getAccessToken = async (req, res) => {
             logger.error('Attempted invalid refresh token reuse!');
             const hackedUser = await User.findOne({
               where: {
-                username: decoded.username
+                username: decoded.UserInfo.username
               },
             });
 
@@ -479,7 +402,7 @@ exports.getAccessToken = async (req, res) => {
           });
       }
       // Refresh token is invalid because it's not matched with the user (but this case should be not happenned because we store refresh token in correct user's record in db)
-      if (err || user.username !== decoded.username) return res.status(403).send({
+      if (err || user.username !== decoded.UserInfo.username) return res.status(403).send({
           status: false,
           message: "Mismatch token!"
       });

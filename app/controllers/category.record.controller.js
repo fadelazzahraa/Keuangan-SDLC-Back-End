@@ -63,13 +63,13 @@ exports.updateCategoryRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  categoryRecord.findAll({
+  categoryRecord.findOne({
     where: {
-      id: req.params.ID,
+      id: req.params.id,
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -82,7 +82,7 @@ exports.updateCategoryRecord = (req, res) => {
         category: req.body.category,
       },
       {
-        where: { id: req.params.ID },
+        where: { id: req.params.id },
       }
     ).then((data) => {
       res.status(201).json({
@@ -117,13 +117,13 @@ exports.deleteCategoryRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  categoryRecord.findAll({
+  categoryRecord.findOne({
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -131,7 +131,7 @@ exports.deleteCategoryRecord = (req, res) => {
     }
     categoryRecord.destroy({
       where: {
-        id: req.params.ID
+        id: req.params.id
       },
     }).then((data) => {
       res.status(200).json({

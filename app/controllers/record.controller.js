@@ -64,13 +64,13 @@ exports.getRecordByID = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  Record.findAll({
+  Record.findOne({
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -137,13 +137,13 @@ exports.updateRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  Record.findAll({
+  Record.findOne({
     where: {
-      id: req.params.ID,
+      id: req.params.id,
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -162,7 +162,7 @@ exports.updateRecord = (req, res) => {
         photoRecordId: req.body.photoRecordId,
       },
       {
-        where: { id: req.params.ID },
+        where: { id: req.params.id },
       }
     ).then((data) => {
       res.status(201).json({
@@ -197,13 +197,13 @@ exports.deleteRecord = (req, res) => {
         message: errors.array()[0]['msg'],
       });
   }
-  Record.findAll({
+  Record.findOne({
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -211,7 +211,7 @@ exports.deleteRecord = (req, res) => {
     }
     Record.destroy({
       where: {
-        id: req.params.ID
+        id: req.params.id
       },
     }).then((data) => {
       res.status(200).json({

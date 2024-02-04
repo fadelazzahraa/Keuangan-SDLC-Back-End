@@ -35,18 +35,18 @@ module.exports = function (app) {
 
   app.post("/photos/:ID/image", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
     body("path").notEmpty().withMessage("Path shouldn't empty").isString().withMessage("Path invalid"),
   ], controller.setImage);
 
   app.get("/photos/:ID/image", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
   ], controller.downloadImage);
   
   app.post("/photos/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
     body("detail").optional().isString().withMessage("Detail invalid"),
     body("date").optional().isDate().withMessage("Date invalid"),
     body("tag").optional().isString().withMessage("Detail invalid"),

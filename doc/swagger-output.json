@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Created by Fadel Azzahra",
+    "description": "Created by Fadel Azzahra, for Keamanan Pemrograman Lanjutan's project",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
@@ -505,7 +505,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -543,7 +543,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -614,7 +614,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -732,7 +732,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -785,7 +785,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -949,7 +949,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -999,7 +999,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1042,7 +1042,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -1095,7 +1095,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "ID",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"

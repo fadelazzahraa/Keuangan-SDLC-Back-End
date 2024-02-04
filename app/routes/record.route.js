@@ -29,11 +29,11 @@ module.exports = function (app) {
   ], controller.postRecord);
   app.get("/records/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
   ], controller.getRecordByID);
   app.post("/records/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
     body("actorId").optional().isInt().withMessage("Actor ID must be an integer"),
     body("transaction").optional().isIn(["debit", "credit"]).withMessage("Transaction invalid"),
     body("value").optional().isDecimal().withMessage("Value invalid"),
@@ -45,7 +45,7 @@ module.exports = function (app) {
   ], controller.updateRecord);
   app.delete("/records/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
   ], controller.deleteRecord);
 
 };

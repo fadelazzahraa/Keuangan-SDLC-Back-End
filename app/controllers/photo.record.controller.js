@@ -40,13 +40,13 @@ exports.getPhotoRecords = (req, res) => {
 };
 
 exports.getPhotoRecordByID = (req, res) => {
-  PhotoRecord.findAll({
+  PhotoRecord.findOne({
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -88,13 +88,13 @@ exports.postPhotoRecord = (req, res) => {
 };
 
 exports.updatePhotoRecord = (req, res) => {
-  PhotoRecord.findAll({
+  PhotoRecord.findOne({
     where: {
-      id: req.params.ID,
+      id: req.params.id,
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -108,7 +108,7 @@ exports.updatePhotoRecord = (req, res) => {
         tag: req.body.tag,
       },
       {
-        where: { id: req.params.ID },
+        where: { id: req.params.id },
       }
     ).then((_) => {
       res.status(201).json({
@@ -132,13 +132,13 @@ exports.updatePhotoRecord = (req, res) => {
 };
 
 exports.deletePhotoRecord = (req, res) => {
-  PhotoRecord.findAll({
+  PhotoRecord.findOne({
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -146,7 +146,7 @@ exports.deletePhotoRecord = (req, res) => {
     }
     PhotoRecord.destroy({
       where: {
-        id: req.params.ID
+        id: req.params.id
       },
     }).then((_) => {
       res.status(200).json({
@@ -230,14 +230,14 @@ exports.setImage = (req, res) => {
       });
   }
 
-  PhotoRecord.findAll({
+  PhotoRecord.findOne({
     raw: true,
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",
@@ -272,7 +272,7 @@ exports.setImage = (req, res) => {
               image: newimage,
             },
             {
-              where: { id: req.params.ID },
+              where: { id: req.params.id },
             }
           ).then((_) => {
             res.status(201).json({
@@ -323,14 +323,14 @@ exports.downloadImage = (req, res) => {
       });
   }
 
-  PhotoRecord.findAll({
+  PhotoRecord.findOne({
     raw: true,
     where: {
-      id: req.params.ID
+      id: req.params.id
     },
   })
   .then((data) => {
-    if (!data.length) {
+    if (!data) {
       return res.status(400).json({
         status: false,
         message: "No match record found with that ID!",

@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'Created by Fadel Azzahra'
+    description: "Created by Fadel Azzahra, for Keamanan Pemrograman Lanjutan's project"
   },
   host: 'localhost:8080'
 };

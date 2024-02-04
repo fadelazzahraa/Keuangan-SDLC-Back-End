@@ -18,13 +18,13 @@ module.exports = function (app) {
   ], controller.postCategoryRecord);
   app.post("/category/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
     body("categoryType").optional().isIn(["debit", "credit"]).withMessage("CategoryType invalid"),
     body("category").optional().isString().withMessage("Category invalid"),
   ], controller.updateCategoryRecord);
   app.delete("/category/:ID", [
     authJwt.verifyToken,
-    check("ID").isInt().withMessage("ID must be an integer"),
+    check("id").isInt().withMessage("ID must be an integer"),
   ], controller.deleteCategoryRecord);
 
 };
