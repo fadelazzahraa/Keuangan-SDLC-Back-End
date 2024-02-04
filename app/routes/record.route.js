@@ -27,11 +27,11 @@ module.exports = function (app) {
     body("categoryRecordId").optional(),
     body("photoRecordId").optional(),
   ], controller.postRecord);
-  app.get("/records/:ID", [
+  app.get("/records/:id", [
     authJwt.verifyToken,
     check("id").isInt().withMessage("ID must be an integer"),
   ], controller.getRecordByID);
-  app.post("/records/:ID", [
+  app.post("/records/:id", [
     authJwt.verifyToken,
     check("id").isInt().withMessage("ID must be an integer"),
     body("actorId").optional().isInt().withMessage("Actor ID must be an integer"),
@@ -43,7 +43,7 @@ module.exports = function (app) {
     body("categoryRecordId").optional(),
     body("photoRecordId").optional(),
   ], controller.updateRecord);
-  app.delete("/records/:ID", [
+  app.delete("/records/:id", [
     authJwt.verifyToken,
     check("id").isInt().withMessage("ID must be an integer"),
   ], controller.deleteRecord);

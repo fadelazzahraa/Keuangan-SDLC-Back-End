@@ -16,13 +16,13 @@ module.exports = function (app) {
     body("categoryType").notEmpty().withMessage("CategoryType shouldn't empty").isIn(["debit", "credit"]).withMessage("CategoryType invalid"),
     body("category").notEmpty().withMessage("Source shouldn't empty").isString().withMessage("Category invalid"),
   ], controller.postCategoryRecord);
-  app.post("/category/:ID", [
+  app.post("/category/:id", [
     authJwt.verifyToken,
     check("id").isInt().withMessage("ID must be an integer"),
     body("categoryType").optional().isIn(["debit", "credit"]).withMessage("CategoryType invalid"),
     body("category").optional().isString().withMessage("Category invalid"),
   ], controller.updateCategoryRecord);
-  app.delete("/category/:ID", [
+  app.delete("/category/:id", [
     authJwt.verifyToken,
     check("id").isInt().withMessage("ID must be an integer"),
   ], controller.deleteCategoryRecord);

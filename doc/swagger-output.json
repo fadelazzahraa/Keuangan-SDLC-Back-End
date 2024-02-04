@@ -500,7 +500,7 @@
         }
       }
     },
-    "/records/{ID}": {
+    "/records/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -727,7 +727,7 @@
         }
       }
     },
-    "/category/{ID}": {
+    "/category/{id}": {
       "post": {
         "description": "",
         "parameters": [
@@ -944,7 +944,7 @@
         }
       }
     },
-    "/photos/{ID}/image": {
+    "/photos/{id}/image": {
       "post": {
         "description": "",
         "parameters": [
@@ -1037,7 +1037,7 @@
         }
       }
     },
-    "/photos/{ID}": {
+    "/photos/{id}": {
       "post": {
         "description": "",
         "parameters": [

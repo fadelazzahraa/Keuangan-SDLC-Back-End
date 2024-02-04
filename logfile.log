@@ -1966,3 +1966,138 @@ info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHER
 info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T14:53:08.325Z"}
 info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-04T14:53:08.326Z"}
 info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T14:53:08.327Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:00:25.010Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:25.031Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:00:25.034Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:25.036Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:00:25.037Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:25.038Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:00:25.039Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:25.040Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:00:25.041Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:00:42.359Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:42.382Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:00:42.383Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:42.386Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:00:42.387Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:42.388Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:00:42.389Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:00:42.391Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:00:42.391Z"}
+info: Cookies: [object Object] {"timestamp":"2024-02-04T15:00:59.599Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Bob' LIMIT 1; {"timestamp":"2024-02-04T15:00:59.606Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`refreshToken` = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJvYiIsImlhdCI6MTcwNzA1NzY4MiwiZXhwIjoxNzA5NjQ5NjgyfQ.S-SyL-MmoKVl6sdmePBrXSNfGlWIZGFoO36mnz3sYDc' LIMIT 1; {"timestamp":"2024-02-04T15:00:59.636Z"}
+info: Cookies: [object Object] {"timestamp":"2024-02-04T15:01:01.821Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Bob' LIMIT 1; {"timestamp":"2024-02-04T15:01:01.822Z"}
+info: Executing (default): UPDATE `users` SET `refreshToken`=?,`updatedAt`=? WHERE `id` = ? {"timestamp":"2024-02-04T15:01:01.847Z"}
+info: Refresh token updated successfully! {"timestamp":"2024-02-04T15:01:01.855Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`id` = 1; {"timestamp":"2024-02-04T15:01:20.350Z"}
+info: Executing (default): SELECT `id`, `username`, `role` FROM `users` AS `users`; {"timestamp":"2024-02-04T15:01:29.445Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Alice' LIMIT 1; {"timestamp":"2024-02-04T15:01:49.404Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`id` = '1'; {"timestamp":"2024-02-04T15:01:49.406Z"}
+info: Executing (default): UPDATE `users` SET `username`=?,`updatedAt`=? WHERE `id` = ? {"timestamp":"2024-02-04T15:01:49.409Z"}
+info: Executing (default): SELECT `id`, `username`, `role` FROM `users` AS `users`; {"timestamp":"2024-02-04T15:01:54.886Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-04T15:02:23.141Z"}
+error: Query error {"0":{"location":"body","msg":"ID must be an integer","path":"id","type":"field"},"timestamp":"2024-02-04T15:02:38.030Z"}
+error: Query error {"0":{"location":"body","msg":"ID must be an integer","path":"id","type":"field"},"timestamp":"2024-02-04T15:02:43.305Z"}
+error: Query error {"0":{"location":"body","msg":"ID must be an integer","path":"id","type":"field"},"timestamp":"2024-02-04T15:02:48.933Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:03:29.805Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:29.826Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:03:29.828Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:29.830Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:03:29.831Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:29.832Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:03:29.833Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:29.834Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:03:29.835Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:03:42.911Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:42.932Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:03:42.934Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:42.937Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:03:42.941Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:42.944Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:03:42.945Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:03:42.946Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:03:42.949Z"}
+error: Query error {"0":{"location":"params","msg":"ID must be an integer","path":"id","type":"field","value":"{ID}"},"timestamp":"2024-02-04T15:03:46.248Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:04:00.350Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:00.372Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:04:00.374Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:00.377Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:04:00.378Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:00.379Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:04:00.380Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:00.381Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:04:00.382Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:04:18.611Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:18.632Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:04:18.634Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:18.636Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:04:18.637Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:18.638Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:04:18.639Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:04:18.640Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:04:18.641Z"}
+info: Cookies: [object Object] {"timestamp":"2024-02-04T15:04:41.483Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Alice' LIMIT 1; {"timestamp":"2024-02-04T15:04:41.489Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`refreshToken` = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJvYiIsImlhdCI6MTcwNzA1ODg2MSwiZXhwIjoxNzA5NjUwODYxfQ.ZMWCCEHSfAtZLayVLs18ChrVzz1OsXcH6RzKxJZzuLM' LIMIT 1; {"timestamp":"2024-02-04T15:04:41.520Z"}
+info: Cookies: [object Object] {"timestamp":"2024-02-04T15:04:43.415Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `refreshToken`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Alice' LIMIT 1; {"timestamp":"2024-02-04T15:04:43.416Z"}
+info: Executing (default): UPDATE `users` SET `refreshToken`=?,`updatedAt`=? WHERE `id` = ? {"timestamp":"2024-02-04T15:04:43.439Z"}
+info: Refresh token updated successfully! {"timestamp":"2024-02-04T15:04:43.446Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record` WHERE `record`.`id` = '1'; {"timestamp":"2024-02-04T15:04:53.902Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record` WHERE `record`.`id` = '2'; {"timestamp":"2024-02-04T15:04:57.197Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:10:51.093Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:10:51.113Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:10:51.115Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:10:51.118Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:10:51.119Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:10:51.120Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:10:51.121Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:10:51.122Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:10:51.122Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:11:04.616Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:04.637Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:11:04.639Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:04.642Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:11:04.643Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:04.644Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:11:04.645Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:04.646Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:11:04.647Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:11:23.667Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:23.688Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:11:23.690Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:23.694Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:11:23.695Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:23.696Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:11:23.697Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:11:23.698Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:11:23.699Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:15:10.421Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:10.445Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:15:10.446Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:10.449Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:15:10.450Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:10.451Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:15:10.452Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:10.453Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:15:10.454Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:15:14.968Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:14.989Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:15:14.992Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:14.994Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:15:14.996Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:14.997Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:15:14.998Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:15:14.999Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:15:15.000Z"}
+info: Server is running on port 8080. {"timestamp":"2024-02-04T15:16:12.774Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:16:12.793Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-04T15:16:12.795Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:16:12.797Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-04T15:16:12.799Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:16:12.801Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-04T15:16:12.802Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'kpl_project' {"timestamp":"2024-02-04T15:16:12.804Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-04T15:16:12.806Z"}
