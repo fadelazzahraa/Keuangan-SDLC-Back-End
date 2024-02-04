@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    'https://www.example.com',
+    'http://localhost:8080',
 ];
 
 const corsOptions = {

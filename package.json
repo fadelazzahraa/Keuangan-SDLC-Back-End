@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server/js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger": "node ./doc/swagger.js"
   },
   "keywords": [
     "node.js",
@@ -41,6 +42,8 @@
     "path": "^0.12.7",
     "prom-client": "^15.1.0",
     "sequelize": "^6.11.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0",
     "winston": "^3.11.0"
   }
 }

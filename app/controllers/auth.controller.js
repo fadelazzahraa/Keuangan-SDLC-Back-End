@@ -6,6 +6,7 @@ const cookie = require('cookie');
 const db = require("../models");
 const config = require("../config/auth.config");
 const authjwt = require("../middleware/authjwt.middleware");
+const logger = require('../config/logger.config.js');
 const User = db.user;
 
 const Op = db.Sequelize.Op;
@@ -16,6 +17,7 @@ exports.signup = async (req, res) => {
     var role = "user";
     if ('adminPass' in req.body){
       console.log(req.body.adminPass);
+      logger.info(`Attempted admin registration with password: ${req.body.adminPass}`);
       if (req.body.adminPass == process.env.ADMINPASS){
         role = "admin";
       } else {
@@ -126,6 +128,7 @@ exports.login = async (req, res) => {
   try {
     const cookies = cookie.parse(req.headers.cookie || '');
     console.log(cookies);
+    logger.info(`Cookies: ${cookies}`);
 
     const user = await User.findOne({
       where: {
@@ -173,7 +176,7 @@ exports.login = async (req, res) => {
     if (!cookies?.jwt) {
       refreshToken = newRefreshToken;
     } else {
-      const refreshToken = cookies.jwt;
+      refreshToken = cookies.jwt;
       const foundToken = await User.findOne({
         where: {
           refreshToken: refreshToken,
@@ -181,11 +184,16 @@ exports.login = async (req, res) => {
       });
 
       if (!foundToken) {
-          console.log('Attempted refresh token reuse at login!')
+          console.log('Attempted refresh token use at login!')
+          logger.error('Attempted refresh token use at login!');
           refreshToken = null;
       }
 
       res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
+      return res.status(401).send({
+        status: false,
+        message: "Attempted refresh token use at login!",
+      });
     }
 
     User.update(
@@ -197,6 +205,7 @@ exports.login = async (req, res) => {
       }
     ).then((data) => {
       console.log('Refresh token updated successfully!');
+      logger.info('Refresh token updated successfully!');
     })
 
     // Creates Secure Cookie with refresh token
@@ -222,6 +231,7 @@ exports.logout = async (req, res) => {
   // On client, also delete the accessToken
   const cookies = cookie.parse(req.headers.cookie || '');
   console.log(cookies);
+  logger.info(`Cookies: ${cookies}`);
   if (!cookies?.jwt) return res.status(200).send({
     status: false,
     message: "No cookie provided!"
@@ -252,6 +262,7 @@ exports.logout = async (req, res) => {
     }
   ).then((data) => {
     console.log('Refresh token cleared successfully!');
+    logger.info('Refresh token cleared successfully!');
   })
 
   res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
@@ -265,6 +276,7 @@ exports.refreshRefreshToken = async (req, res) => {
   // On client, also delete the accessToken
   const cookies = cookie.parse(req.headers.cookie || '');
   console.log(cookies);
+  logger.info(`Cookies: ${cookies}`);
   if (!cookies?.jwt) return res.status(200).send({
     status: false,
     message: "No cookie provided!"
@@ -291,6 +303,7 @@ exports.refreshRefreshToken = async (req, res) => {
                 message: "Invalid token!" 
             });
             console.log('Attempted invalid refresh token reuse!')
+            logger.error('Attempted invalid refresh token reuse!');
             const hackedUser = await User.findOne({
               where: {
                 username: decoded.username
@@ -306,6 +319,7 @@ exports.refreshRefreshToken = async (req, res) => {
               }
             ).then((data) => {
               console.log('Refresh token updated successfully!');
+              logger.info('Refresh token updated successfully!');
             });
         }
     )
@@ -323,6 +337,7 @@ exports.refreshRefreshToken = async (req, res) => {
       // Refresh token is invalid because it's expired
       if (err) {
           console.log('Expired refresh token')
+          logger.error('Expired refresh token');
           User.update(
             {
               refreshToken: null
@@ -332,6 +347,7 @@ exports.refreshRefreshToken = async (req, res) => {
             }
           ).then((data) => {
             console.log('Refresh token updated successfully!');
+            logger.info('Refresh token updated successfully!');
           });
       }
       // Refresh token is invalid because it's not matched with the user (but this case should be not happenned because we store refresh token in correct user's record in db)
@@ -369,6 +385,7 @@ exports.refreshRefreshToken = async (req, res) => {
         }
       ).then((data) => {
         console.log('Refresh token updated successfully!');
+        logger.info('Refresh token updated successfully!');
       })
 
       // Creates Secure Cookie with refresh token
@@ -388,6 +405,7 @@ exports.refreshRefreshToken = async (req, res) => {
 exports.getAccessToken = async (req, res) => {
   const cookies = cookie.parse(req.headers.cookie || '');
   console.log(cookies);
+  logger.info(`Cookies: ${cookies}`);
   if (!cookies?.jwt) return res.status(200).send({
     status: false,
     message: "No cookie provided!"
@@ -413,6 +431,7 @@ exports.getAccessToken = async (req, res) => {
                 message: "Invalid token!" 
             });
             console.log('Attempted invalid refresh token reuse!')
+            logger.error('Attempted invalid refresh token reuse!');
             const hackedUser = await User.findOne({
               where: {
                 username: decoded.username
@@ -428,6 +447,7 @@ exports.getAccessToken = async (req, res) => {
               }
             ).then((data) => {
               console.log('Refresh token updated successfully!');
+              logger.info('Refresh token updated successfully!');
             });
         }
     )
@@ -444,7 +464,8 @@ exports.getAccessToken = async (req, res) => {
     async (err, decoded) => {
       // Refresh token is invalid because it's expired
       if (err) {
-          console.log('Expired refresh token')
+          console.log('Expired refresh token');
+          logger.error('Expired refresh token');
           User.update(
             {
               refreshToken: null
@@ -454,6 +475,7 @@ exports.getAccessToken = async (req, res) => {
             }
           ).then((data) => {
             console.log('Refresh token updated successfully!');
+            logger.info('Refresh token updated successfully!');
           });
       }
       // Refresh token is invalid because it's not matched with the user (but this case should be not happenned because we store refresh token in correct user's record in db)

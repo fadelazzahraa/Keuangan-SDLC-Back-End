@@ -1,5 +1,6 @@
 const db = require("../models");
 const { validationResult } = require('express-validator');
+const logger = require('../config/logger.config');
 const Record = db.record;
 
 const Op = db.Sequelize.Op;
@@ -8,6 +9,7 @@ exports.getRecords = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
@@ -55,6 +57,7 @@ exports.getRecordByID = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
@@ -92,6 +95,7 @@ exports.postRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
@@ -126,6 +130,7 @@ exports.updateRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
@@ -185,6 +190,7 @@ exports.deleteRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,

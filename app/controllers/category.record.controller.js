@@ -1,6 +1,7 @@
 const db = require("../models");
 const { validationResult } = require('express-validator');
 const categoryRecord = db.categoryRecord;
+const logger = require('../config/logger.config');
 
 const Op = db.Sequelize.Op;
 
@@ -25,6 +26,7 @@ exports.postCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
@@ -53,6 +55,8 @@ exports.updateCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
+
       return res.status(422).send(
       {
         status: false,
@@ -106,6 +110,7 @@ exports.deleteCategoryRecord = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
+      logger.error('Query error', errors.array());
       return res.status(422).send(
       {
         status: false,
