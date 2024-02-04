@@ -1,4 +1,5 @@
 const { verifySignUp, authJwt } = require("../middleware");
+const { body } = require("express-validator");
 const controller = require("../controllers/auth.controller");
 
 module.exports = function (app) {
@@ -7,11 +8,28 @@ module.exports = function (app) {
     next();
   });
 
-  app.post("/auth/signup", [verifySignUp.checkDuplicateUsername], controller.signup);
+  app.post("/auth/signup", [
+    verifySignUp.checkDuplicateUsername,
+    body("username").notEmpty().withMessage("Username shouldn't empty"),
+    body("password").notEmpty().withMessage("Password shouldn't empty"),
+    body("adminPass").optional(),
+  ], controller.signup);
 
-  app.post("/auth/signin", controller.signin);
+  app.post("/auth/signin", [
+    body("username").notEmpty().withMessage("Username shouldn't empty"),
+    body("password").notEmpty().withMessage("Password shouldn't empty"),
+  ],
+  controller.login);
 
-  app.post("/auth/signout", [authJwt.verifyToken], controller.signout);
+  app.post("/auth/signout", [
+    authJwt.verifyToken,
+  ],
+  controller.logout);
 
-  app.post("/auth/revoke", [authJwt.verifyToken], controller.revokeToken);
+  app.post("/auth/refresh",
+    controller.refreshRefreshToken);
+
+  app.get("/auth/refresh", 
+    controller.getAccessToken);
+
 };

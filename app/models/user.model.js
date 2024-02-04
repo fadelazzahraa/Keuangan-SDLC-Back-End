@@ -17,6 +17,10 @@ module.exports = (sequelize, Sequelize) => {
     role: {
       type: Sequelize.ENUM("user", "admin"),
     },
+    refreshToken: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
   });
 
   return User;
