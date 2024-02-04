@@ -1,4 +1,4 @@
-const { verifySignUp } = require("../middleware");
+const { verifySignUp, authJwt } = require("../middleware");
 const controller = require("../controllers/auth.controller");
 
 module.exports = function (app) {
@@ -11,5 +11,7 @@ module.exports = function (app) {
 
   app.post("/auth/signin", controller.signin);
 
-  app.post("/auth/signout", controller.signout);
+  app.post("/auth/signout", [authJwt.verifyToken], controller.signout);
+
+  app.post("/auth/revoke", [authJwt.verifyToken], controller.revokeToken);
 };

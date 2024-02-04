@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
 const config = require("../config/auth.config.js");
-const db = require("../models/index.js");
-const User = db.user;
+
+
+const revokedTokens = new Set();
 
 verifyToken = (req, res, next) => {
   let token = req.get("Authorization");
@@ -10,6 +11,13 @@ verifyToken = (req, res, next) => {
     return res.status(403).send({
       message: "No token provided!",
     });
+  }
+
+  // Check if the token is revoked
+  if (revokedTokens.has(token)) {
+    return res.status(401).json({ 
+      status: false,
+      message: 'Token has been revoked' });
   }
 
   jwt.verify(token, config.secret, (err, decoded) => {
@@ -23,7 +31,9 @@ verifyToken = (req, res, next) => {
   });
 };
 
+
 const authJwt = {
   verifyToken,
+  revokedTokens,
 };
 module.exports = authJwt;

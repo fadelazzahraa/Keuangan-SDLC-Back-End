@@ -1,0 +1,211 @@
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:24:57.207Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:24:57.214Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:24:57.217Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:24:57.220Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:24:57.224Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:24:57.228Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:24:57.232Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:24:57.235Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:25:12.825Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:25:19.339Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:25:25.109Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:25:26.137Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:28:49.533Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:28:49.540Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:28:49.545Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:28:49.550Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:28:49.555Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:28:49.558Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:28:49.562Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:28:49.566Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:30:13.090Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:30:13.094Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:30:13.098Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:30:13.101Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:30:13.102Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:30:13.105Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:30:13.107Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:30:13.109Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:00.361Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:33:00.369Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:00.376Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:33:00.379Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:00.384Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:33:00.387Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:00.394Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:33:00.398Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:25.956Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:33:25.962Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:25.967Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:33:25.973Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:25.976Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:33:25.979Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:25.982Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:33:25.986Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:29.561Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:33:29.570Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:29.576Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:33:29.579Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:29.582Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:33:29.585Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:33:29.587Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:33:29.590Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:51:01.213Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:51:01.223Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:51:01.230Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:51:01.236Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:51:01.239Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:51:01.242Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:51:01.246Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:51:01.251Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Bob' LIMIT 1; {"timestamp":"2024-02-03T14:51:46.742Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:51:50.947Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:51:58.933Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:52:37.451Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:52:37.459Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:52:37.463Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:52:37.465Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:52:37.468Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:52:37.471Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:52:37.474Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:52:37.476Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:52:40.441Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:52:41.108Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:52:44.187Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:53:24.311Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:53:24.321Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:53:24.326Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:53:24.333Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:53:24.336Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:53:24.339Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:53:24.343Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:53:24.348Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:03.720Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:54:03.730Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:03.738Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:54:03.744Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:03.748Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:54:03.752Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:03.758Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:54:03.763Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:16.363Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:54:16.370Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:16.376Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:54:16.379Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:16.383Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:54:16.385Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:54:16.386Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:54:16.390Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:02.403Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:55:02.412Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:02.416Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:55:02.419Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:02.422Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:55:02.426Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:02.428Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:55:02.430Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:10.710Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:55:10.718Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:10.722Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:55:10.725Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:10.728Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:55:10.732Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:10.737Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:55:10.742Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:14.827Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:55:14.841Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:14.848Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:55:14.854Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:14.859Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:55:14.863Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:55:14.868Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:55:14.872Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:55:35.924Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:55:43.125Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:56:06.186Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:56:19.623Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T14:56:38.910Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:57:14.325Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:57:43.627Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:57:43.637Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:57:43.642Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:57:43.648Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:57:43.651Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:57:43.655Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:57:43.658Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:57:43.665Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:35.604Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:58:35.612Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:35.619Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:58:35.625Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:35.629Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:58:35.633Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:35.636Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:58:35.639Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:38.654Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:58:38.665Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:38.670Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:58:38.673Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:38.675Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:58:38.678Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:58:38.680Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:58:38.684Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:34.969Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:59:34.979Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:34.983Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:59:34.987Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:34.990Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:59:34.992Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:34.995Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:59:34.997Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:38.000Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T14:59:38.009Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:38.018Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T14:59:38.021Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:38.026Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T14:59:38.029Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T14:59:38.032Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T14:59:38.035Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T14:59:56.930Z"}
+info: Executing (default): SELECT `id`, `username`, `password`, `role`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Eve' LIMIT 1; {"timestamp":"2024-02-03T15:00:11.896Z"}
+info: Executing (default): SELECT `id`, `actorId`, `transaction`, `value`, `detail`, `date`, `tag`, `createdAt`, `updatedAt`, `categoryRecordId`, `photoRecordId` FROM `records` AS `record`; {"timestamp":"2024-02-03T15:00:39.407Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:51.524Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T15:00:51.528Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:51.531Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T15:00:51.533Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:51.534Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T15:00:51.536Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:51.538Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T15:00:51.542Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:59.715Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T15:00:59.720Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:59.724Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T15:00:59.728Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:59.730Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T15:00:59.732Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:00:59.737Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T15:00:59.741Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:01.366Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T15:01:01.375Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:01.379Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T15:01:01.382Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:01.384Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T15:01:01.386Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:01.389Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T15:01:01.393Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:10.311Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T15:01:10.319Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:10.325Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T15:01:10.328Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:10.332Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T15:01:10.334Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:01:10.337Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T15:01:10.339Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:02:07.957Z"}
+info: Executing (default): SHOW INDEX FROM `users` {"timestamp":"2024-02-03T15:02:07.963Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'categoryRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:02:07.967Z"}
+info: Executing (default): SHOW INDEX FROM `categoryRecords` {"timestamp":"2024-02-03T15:02:07.971Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'photoRecords' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:02:07.973Z"}
+info: Executing (default): SHOW INDEX FROM `photoRecords` {"timestamp":"2024-02-03T15:02:07.975Z"}
+info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'records' AND TABLE_SCHEMA = 'sim_keuangan' {"timestamp":"2024-02-03T15:02:07.977Z"}
+info: Executing (default): SHOW INDEX FROM `records` {"timestamp":"2024-02-03T15:02:07.979Z"}

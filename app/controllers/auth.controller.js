@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const db = require("../models");
 const config = require("../config/auth.config");
+const authjwt = require("../middleware/authjwt.middleware");
 const User = db.user;
 
 
@@ -88,6 +89,10 @@ exports.signin = async (req, res) => {
 };
 
 exports.signout = async (req, res) => {
+  const tokenToRevoke = req.body.token;
+
+  revokedTokens.add(tokenToRevoke);
+
   try {
     return res.status(200).send({
       status: true,
@@ -99,4 +104,20 @@ exports.signout = async (req, res) => {
       message: error.message,
     });
   }
+};
+
+exports.revokeToken = async (req, res) => {
+  // check req.body.token. if empty, use req.get("Authorization")
+  const tokenToRevoke = req.body.token || req.get("Authorization");
+
+  if (!tokenToRevoke) {
+    return res.status(400).json({ 
+      status: false,
+      message: 'Token not provided' });
+  }
+
+  authjwt.revokedTokens.add(tokenToRevoke);
+  res.status(200).json({ 
+    status: true,
+    message: 'Token revoked successfully' });
 };

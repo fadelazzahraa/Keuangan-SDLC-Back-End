@@ -1,20 +1,25 @@
 const express = require("express");
 const cors = require("cors");
+const rateLimit = require('express-rate-limit');
+const corsOptions = require('./app/config/cors.config');
+const limiterOptions = require('./app/config/limiter.config');
+const db = require("./app/models");
 
 const app = express();
 
 global.__basedir = __dirname;
 
-app.use(cors());
+// implement cors
+app.use(cors(corsOptions));
+
+// implement limit request
+app.use(rateLimit(limiterOptions));
 
 // parse requests of content-type - application/json
 app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-
-// database
-const db = require("./app/models");
 
 db.sequelize.sync();
 // force: true will drop the table if it already exists
@@ -39,3 +44,4 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+

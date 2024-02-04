@@ -1,4 +1,5 @@
 const config = require("../config/db.config.js");
+const logger = require('../config/logger.config.js');
 
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
@@ -11,6 +12,10 @@ const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
     min: config.pool.min,
     acquire: config.pool.acquire,
     idle: config.pool.idle,
+  },
+  logging: (message) => {
+    // Log Sequelize queries using Winston
+    logger.info(message);
   },
 });
 
