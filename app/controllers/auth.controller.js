@@ -5,7 +5,6 @@ const cookie = require('cookie');
 
 const db = require("../models");
 const config = require("../config/auth.config");
-const authjwt = require("../middleware/authjwt.middleware");
 const logger = require('../config/logger.config.js');
 const User = db.user;
 
@@ -16,7 +15,7 @@ exports.signup = async (req, res) => {
   try {
     var role = "user";
     if ('adminPass' in req.body){
-      console.log(req.body.adminPass);
+      console.log(`Attempted admin registration with password: ${req.body.adminPass}`);
       logger.info(`Attempted admin registration with password: ${req.body.adminPass}`);
       if (req.body.adminPass == config.adminPassword){
         role = "admin";
@@ -33,6 +32,9 @@ exports.signup = async (req, res) => {
       password: bcrypt.hashSync(req.body.password, 8),
       role: role,
     });
+
+    console.log("User: ", req.body.username, " with role ", role , " has been signed in!")
+    logger.info("User: ", req.body.username, " with role ", role , " has been signed in!")
     
     res.status(201).send({
       status: "true",
@@ -130,6 +132,8 @@ exports.login = async (req, res) => {
       console.log('Refresh token updated successfully!');
       logger.info('Refresh token updated successfully!');
     })
+    console.log("User: ", user.username, " has been logged in!");
+    logger.info("User: ", user.username, " has been logged in!");
 
     // Creates Secure Cookie with refresh token
     res.cookie('jwt', newRefreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
@@ -187,7 +191,8 @@ exports.logout = async (req, res) => {
     console.log('Refresh token cleared successfully!');
     logger.info('Refresh token cleared successfully!');
   })
-
+  console.log("User: ", user.username, " has been logged out!")
+  logger.info("User: ", user.username, " has been logged out!")
   res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
   res.status(200).send({
     status: true,
@@ -311,12 +316,15 @@ exports.refreshRefreshToken = async (req, res) => {
         logger.info('Refresh token updated successfully!');
       })
 
+      console.log("User: ", user.username, " has requested new refresh token!");
+      logger.info("User: ", user.username, " has requested new refresh token!");
+
       // Creates Secure Cookie with refresh token
       res.cookie('jwt', newRefreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
 
       return res.status(200).send({
         status: true,
-        message: "Refresh token success!",
+        message: "Get new refresh token success!",
         token: accessToken,
         id: user.id,
         role: user.role
@@ -408,6 +416,8 @@ exports.getAccessToken = async (req, res) => {
       });
 
       // If refresh token was still valid
+      console.log("User: ", user.username, " has requested new access token!");
+      logger.info("User: ", user.username, " has requested new access token!");
       const accessToken = jwt.sign(
         {
             "UserInfo": {

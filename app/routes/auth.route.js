@@ -1,5 +1,5 @@
 const { verifySignUp, authJwt } = require("../middleware");
-const { body } = require("express-validator");
+const { body, param } = require("express-validator");
 const controller = require("../controllers/auth.controller");
 
 module.exports = function (app) {

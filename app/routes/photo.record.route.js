@@ -1,5 +1,5 @@
 const { authJwt } = require("../middleware");
-const { body, param, query, check } = require("express-validator");
+const { body, param, query } = require("express-validator");
 const controller = require("../controllers/photo.record.controller");
 const upload = require("../middleware/upload.middleware");
 
@@ -35,18 +35,18 @@ module.exports = function (app) {
 
   app.post("/photos/:id/image", [
     authJwt.verifyToken,
-    check("id").isInt().withMessage("ID must be an integer"),
+    param("id").isInt().withMessage("ID must be an integer"),
     body("path").notEmpty().withMessage("Path shouldn't empty").isString().withMessage("Path invalid"),
   ], controller.setImage);
 
   app.get("/photos/:id/image", [
     authJwt.verifyToken,
-    check("id").isInt().withMessage("ID must be an integer"),
+    param("id").isInt().withMessage("ID must be an integer"),
   ], controller.downloadImage);
   
   app.post("/photos/:id", [
     authJwt.verifyToken,
-    check("id").isInt().withMessage("ID must be an integer"),
+    param("id").isInt().withMessage("ID must be an integer"),
     body("detail").optional().isString().withMessage("Detail invalid"),
     body("date").optional().isDate().withMessage("Date invalid"),
     body("tag").optional().isString().withMessage("Detail invalid"),

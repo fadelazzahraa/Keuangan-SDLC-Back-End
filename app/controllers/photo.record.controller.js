@@ -222,14 +222,13 @@ exports.setImage = (req, res) => {
   if (!errors.isEmpty()) {
       console.log('Query error', errors.array());
       logger.error('Query error', errors.array());
-
+      
       return res.status(422).send(
       {
         status: false,
         message: errors.array()[0]['msg'],
       });
   }
-
   PhotoRecord.findOne({
     raw: true,
     where: {
@@ -243,9 +242,9 @@ exports.setImage = (req, res) => {
         message: "No match record found with that ID!",
       });
     }
-
+    
     try {
-      var oldimage = data[0].image;
+      var oldimage = data.image || "";
       var newimage = req.body.path.slice(0, -4) + ".jpg"
 
       var oldimagepath = __basedir + "/uploads/" + oldimage;
@@ -336,7 +335,7 @@ exports.downloadImage = (req, res) => {
         message: "No match record found with that ID!",
       });
     }
-    var image = data[0].image;
+    var image = data.image;
     
     if (image == null){
       return res.status(404).json({

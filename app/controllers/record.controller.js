@@ -21,6 +21,9 @@ exports.getRecords = (req, res) => {
   if ('actorId' in req.query){
     whereQuery.push({actorId: req.query.actorId})
   }
+  if ('transaction' in req.query){
+    whereQuery.push({transaction: req.query.transaction})
+  }
   if ('detail' in req.query){
     whereQuery.push({detail: {[Op.substring]: req.query.detail}})
   }
@@ -103,7 +106,7 @@ exports.postRecord = (req, res) => {
       });
   }
   Record.create({
-    actorId: req.body.actorId,
+    actorId: req.body.actorId || req.userId,
     transaction: req.body.transaction,
     value: req.body.value,
     detail: req.body.detail,
@@ -168,7 +171,6 @@ exports.updateRecord = (req, res) => {
       res.status(201).json({
         status: true,
         message: "Update financial record success!",
-        data: data,
       });
     })
     .catch((err) => {
@@ -217,7 +219,6 @@ exports.deleteRecord = (req, res) => {
       res.status(200).json({
         status: true,
         message: "Delete financial record success!",
-        data: data,
       });
     })
     .catch((err) => {

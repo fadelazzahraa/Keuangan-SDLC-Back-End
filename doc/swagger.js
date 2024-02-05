@@ -6,14 +6,6 @@ const options = {
     description: "Created by Fadel Azzahra, for Keamanan Pemrograman Lanjutan's project"
   },
   host: 'localhost:8080',
-  modifyParameters: (parameters, req) => {
-    // Check if the parameter is named "id"
-    if (parameters.name === 'id') {
-      // Set the type to "integer"
-      parameters.schema.type = 'integer';
-    }
-    return parameters;
-  },
 };
 
 const outputFile = './swagger-output.json';

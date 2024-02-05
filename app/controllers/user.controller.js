@@ -41,17 +41,17 @@ exports.getUserProfile = async (req, res) => {
 exports.postUserProfile = (req, res) => {
   User.findOne({
     where: {
-      id: req.body.id || req.userId,
+      id: req.userId,
     },
   })
     .then(async (user) => {
       const dataUser = user.dataValues;
       const dataUpdate = {
-        username: req.body.username ? req.body.username : dataUser.username,
+        username: req.body.username || dataUser.username,
       };
       User.update(dataUpdate, {
         where: {
-          id: req.body.id || req.userId,
+          id: req.userId,
         },
       })
         .then((x) => {

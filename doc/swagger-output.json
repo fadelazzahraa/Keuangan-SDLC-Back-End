@@ -223,9 +223,6 @@
               "properties": {
                 "username": {
                   "example": "any"
-                },
-                "id": {
-                  "example": "any"
                 }
               }
             }
@@ -392,6 +389,11 @@
           },
           {
             "name": "actorId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "transaction",
             "in": "query",
             "type": "string"
           },
@@ -915,7 +917,7 @@
     },
     "/photos/upload": {
       "post": {
-        "description": "",
+        "description": "Upload a photo",
         "parameters": [
           {
             "name": "authorization",
@@ -926,6 +928,14 @@
             "name": "Authorization",
             "in": "header",
             "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "formData",
+            "description": "The file to upload",
+            "required": true,
+            "type": "file",
+            "consumes": "multipart/form-data"
           }
         ],
         "responses": {
@@ -996,7 +1006,7 @@
         }
       },
       "get": {
-        "description": "",
+        "description": "Get information or download a file",
         "parameters": [
           {
             "name": "id",
@@ -1017,7 +1027,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request"
@@ -1035,7 +1053,7 @@
             "description": "Unprocessable Entity"
           }
         }
-      }
+      }      
     },
     "/photos/{id}": {
       "post": {

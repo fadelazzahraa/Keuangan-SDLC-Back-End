@@ -88,7 +88,6 @@ exports.updateCategoryRecord = (req, res) => {
       res.status(201).json({
         status: true,
         message: "Update category record success!",
-        data: data,
       });
     })
     .catch((err) => {
@@ -137,7 +136,6 @@ exports.deleteCategoryRecord = (req, res) => {
       res.status(200).json({
         status: true,
         message: "Delete category record success!",
-        data: data,
       });
     })
     .catch((err) => {

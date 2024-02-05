@@ -1,5 +1,5 @@
 const { authJwt } = require("../middleware");
-const { body, check } = require("express-validator");
+const { body, param } = require("express-validator");
 const controller = require("../controllers/category.record.controller");
 
 module.exports = function (app) {
@@ -18,13 +18,13 @@ module.exports = function (app) {
   ], controller.postCategoryRecord);
   app.post("/category/:id", [
     authJwt.verifyToken,
-    check("id").isInt().withMessage("ID must be an integer"),
+    param("id").isInt().withMessage("ID must be an integer"),
     body("categoryType").optional().isIn(["debit", "credit"]).withMessage("CategoryType invalid"),
     body("category").optional().isString().withMessage("Category invalid"),
   ], controller.updateCategoryRecord);
   app.delete("/category/:id", [
     authJwt.verifyToken,
-    check("id").isInt().withMessage("ID must be an integer"),
+    param("id").isInt().withMessage("ID must be an integer"),
   ], controller.deleteCategoryRecord);
 
 };
